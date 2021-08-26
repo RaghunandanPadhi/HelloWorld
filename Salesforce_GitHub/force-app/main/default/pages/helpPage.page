@@ -1,0 +1,6 @@
+<apex:page >
+   
+  <b> Welcome to Help-Desk!</b>
+  <br/><br/>
+  We are happy to Help you.
+</apex:page>

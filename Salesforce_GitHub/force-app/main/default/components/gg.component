@@ -1,0 +1,37 @@
+<!--All custom component definitions must be wrapped inside a single <apex:component> tag -->
+<apex:component >
+    <!-- 1) Attributes are defined with the <apex:attribute> tag
+            2) The attribute tag can be a child of a component tag only
+             3) An Attribute-tag requires values for the name, description, and type attributes:
+                 a) Name = defines how the custom attribute can be referenced in Visualforce pages.
+                           The name must be unique across components and is case insensitive.
+                 b) description = defines the help text for the attribute that appears in the 
+                                  component reference library once the custom component has been
+                                  saved. The custom component is listed in the reference library
+                                  with the standard components that are also available.
+                 c) type = defines the Apex data type of the attribute. Only the following data
+                           types are allowed as values for the type attribute:
+1. Primitives : such as String, Integer, or Boolean.
+2. sObjects : such as Account, My_Custom_Object__c, or the generic
+             sObject type.
+3. One-dimensional lists : specified using array-notation, such as
+                           String[], or Contact[].
+4. Maps : specified using type="map". You don’t need to specify the
+          map’s specific data type.
+5. Custom Apex classes
+            -->
+
+     <!--We are creating Custom-Component named: 'MyExample'  & 
+         3 attributes of it named: 'empName', 'salary', 'colour' -->    
+    <apex:attribute name="empName" type="String" description="This is employee name" />
+    <apex:attribute name="salary" type="Decimal" description="Employee salary" />
+    <apex:attribute name="color" type="String" description="Color code" />
+     
+    <!-- Attributes will be shown in a Block with their corresponding Label Name -->    
+    <apex:pageBlock title="Employee">
+  <div style="color:{!color}">
+       EmpName : {!empName}<br/><br/>
+       Salary  :{!salary}<br/><br/>    
+  </div>
+    </apex:pageBlock>
+</apex:component>
