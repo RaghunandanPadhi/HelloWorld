@@ -6,5 +6,5 @@ public class Apex_Test_1 {
     public void callMe(){
         name='Wipro';
         city='Hyd';
-    }
+    } //
 }
